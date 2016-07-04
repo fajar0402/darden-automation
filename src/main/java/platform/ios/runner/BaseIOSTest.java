@@ -3,7 +3,7 @@ package platform.ios.runner;
 import common.AbstractPage;
 import common.BaseAcceptance;
 import platform.Platform;
-import platform.ios.pages.HomePage;
+import platform.ios.pages.*;
 
 /**
  * Created by C07HJAXNDJD0 on 6/14/16.
