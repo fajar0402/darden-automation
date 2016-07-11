@@ -51,7 +51,7 @@ public class HomePage extends AbstractModule{
     @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[2]")
     public MobileElement orderToGoBtn;
 
-    @iOSFindBy(xpath = "UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]")
+    @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[3]")
     public MobileElement findRestaurantBtn;
 
     @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[4]")
@@ -76,7 +76,7 @@ public class HomePage extends AbstractModule{
     /*
      *  footer no selected location
      */
-    
+
     @iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[1]/UIAStaticText[4]")
     public MobileElement pleaseSelectOgLocation;
 
