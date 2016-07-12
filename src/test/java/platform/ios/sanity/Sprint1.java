@@ -114,6 +114,7 @@ public class Sprint1 extends BaseIOSTest {
         waitFor(4);
         homePage.viewDetailsBtnFirstRow.click();
         homePage.displayLog("10. Click View Details Button");
+        waitFor(2);
         homePage.nutritionFactBtn.click();
         homePage.displayLog("11. Nutrition Fact Detail");
     }
