@@ -5,7 +5,7 @@ import org.junit.Test;
 import platform.ios.runner.BaseIOSTest;
 
 /**
- * Created by C07HJAXNDJD0 on 6/14/16.
+ * Created by yaserar on 7/12/16.
  */
 public class Sprint1 extends BaseIOSTest {
 
@@ -13,11 +13,15 @@ public class Sprint1 extends BaseIOSTest {
     public void Sprint1_HomeScreen1(){
         homePage.locationModalAllowBtn.click();
         homePage.displayLog("1. Click Allow Button");
+        homePage.languageModalSpanish.isDisplayed();
+        homePage.displayLog("2. Language modal Spanish is Display");
+        homePage.languageModalEnglish.isDisplayed();
+        homePage.displayLog("3. Language Modal English is Display");
         homePage.languageModalEnglish.click();
-        homePage.displayLog("2. Click Language Modal English");
+        homePage.displayLog("4. Click Language Modal English");
         waitFor(2);
         Assert.assertTrue("Carousel Image is Displayed", homePage.carouselImage.isDisplayed());
-        homePage.displayLog("3. Ability of the app to display landing screen with sub-features: carousel");
+        homePage.displayLog("5. Ability of the app to display landing screen with sub-features: carousel");
         waitFor(2);
     }
 
@@ -29,29 +33,89 @@ public class Sprint1 extends BaseIOSTest {
         homePage.displayLog("2. Click Language Modal English");
         waitFor(2);
         Assert.assertTrue("Hamburger Button is Displayed", homePage.hamburgerBtn.isDisplayed());
-        homePage.displayLog("3, Hamburger Button is display");
+        homePage.displayLog("3. Hamburger Button is Display");
+        homePage.footerRightDownArrowButton.click();
+        homePage.displayLog("4. Click Footer Right Down Arrow Button");
+        waitFor(4);
+        homePage.firstRowPlace.click();
+        homePage.displayLog("5. Select Palo Alto");
+        waitFor(2);
+        homePage.backBtn.click();
+        homePage.displayLog("6. Click Back Button ");
+        homePage.backBtn.click();
+        homePage.displayLog("7. Click Back Button ");
+        homePage.menuCollapsed.click();
+        homePage.displayLog("8. Click Menu Collapsed");
+        Assert.assertTrue("Get Direction Button is Displayed", homePage.getDirectionBtn.isDisplayed());
+        homePage.displayLog("9. Get Direction Button is Displayed");
+        Assert.assertTrue("Change location Button is Displayed", homePage.changeLocationBtn.isDisplayed());
+        homePage.displayLog("10. Change location Button is Displayed");
+        Assert.assertTrue("More details Button is Displayed", homePage.moreDetailsBtn.isDisplayed());
+        homePage.displayLog("11. More details Button is Displayed");
+        waitFor(2);
     }
 
     @Test
-    public  void Sprint1_HomeScreen3() {
+    public void Sprint1_HomeScreen3() {
         homePage.locationModalAllowBtn.click();
         homePage.displayLog("1. Click Allow Button");
         homePage.languageModalEnglish.click();
         homePage.displayLog("2. Click Language Modal English");
         waitFor(2);
-        homePage.logoApp.isDisplayed();
-        homePage.displayLog("3. Screen Tittle is display");
+        homePage.viewMenu.click();
+        homePage.displayLog("3. Click View Menu Button");
+        waitFor(5);
+        homePage.firstRowPlace.click();
+        homePage.displayLog("Select Location");
+        waitFor(2);
+        homePage.backBtn.click();
+        homePage.displayLog("4. Click Back Button");
+        homePage.backBtn.click();
+        homePage.displayLog("5. Click Back Button");
+        homePage.viewMenu.click();
+        homePage.displayLog("6. Click View Menu Button");
+        waitFor(4);
+        Assert.assertTrue("Menu page is Displayed", homePage.menuTittleTxt.isDisplayed());
+        homePage.displayLog(". Menu page is Displayed");
+        waitFor(2);
+        homePage.dinnerBtn.click();
+        homePage.displayLog(". Click Dinner Button");
+        Assert.assertTrue("Breadcrumb Button is Displayed", homePage.breadCrumbNavigation.isDisplayed());
+        homePage.displayLog("Breadcrumb Navigation is Displyed");
     }
 
     @Test
-    public  void sprint1_HomeScreen4(){
+    public void sprint1_HomeScreen4(){
         homePage.locationModalAllowBtn.click();
         homePage.displayLog("1. Click Allow Button");
         homePage.languageModalEnglish.click();
         homePage.displayLog("2. Click Language Modal English");
         waitFor(2);
-        homePage.hamburgerBtn.click();
-        homePage.displayLog("3. Homepage is display able to tap");
+        homePage.viewMenu.click();
+        homePage.displayLog("3. Click View Menu Button");
+        waitFor(5);
+        homePage.firstRowPlace.click();
+        homePage.displayLog("Select Location");
+        waitFor(2);
+        homePage.backBtn.click();
+        homePage.displayLog("4. Click Back Button");
+        homePage.backBtn.click();
+        homePage.displayLog("5. Click Back Button");
+        homePage.viewMenu.click();
+        homePage.displayLog("6. Click View Menu Button");
+        waitFor(4);
+        Assert.assertTrue("Menu page is Displayed", homePage.menuTittleTxt.isDisplayed());
+        homePage.displayLog("7. Menu page is Displayed");
+        waitFor(2);
+        homePage.dinnerBtn.click();
+        homePage.displayLog("8. Click Dinner Button");
+        homePage.appetizersBtn.click();
+        homePage.displayLog("9. Click Appetizers Button");
+        waitFor(4);
+        homePage.viewDetailsBtnFirstRow.click();
+        homePage.displayLog("10. Click View Details Button");
+        homePage.nutritionFactBtn.click();
+        homePage.displayLog("11. Nutrition Fact Detail");
     }
 
     @Test
